@@ -17,7 +17,7 @@ export function Report({ entries, onDelete }: Props) {
             <li
               key={i}
               style={{
-                backgroundColor: "#f8f9fa",
+                backgroundColor: "#black",
                 padding: "1rem",
                 marginBottom: "1rem",
                 borderRadius: "6px",

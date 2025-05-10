@@ -19,7 +19,8 @@ function App() {
       maxWidth: "500px",
       margin: "0 auto",
       padding: "1rem",
-      fontFamily: "sans-serif"
+      fontFamily: "sans-serif",
+      color: "white"
     }}>
       <h1 style={{ textAlign: "center" }}>Controle de Colheita</h1>
       <DailyValueForm onSave={(val) => setDailyValues([...dailyValues, val])} />
