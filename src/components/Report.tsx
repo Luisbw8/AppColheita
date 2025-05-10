@@ -7,7 +7,7 @@ interface Props {
 
 export function Report({ entries, onDelete }: Props) {
   return (
-    <div>
+    <div style={{ overflowX: "auto", marginTop: "2rem" }}>
       <h2>Relatório</h2>
       {entries.length === 0 ? (
         <p>Nenhuma produção registrada.</p>
@@ -19,7 +19,7 @@ export function Report({ entries, onDelete }: Props) {
               <th>Funcionário</th>
               <th>Caixas</th>
               <th>Total (R$)</th>
-              <th>Ações</th>
+              <th>Ação</th>
             </tr>
           </thead>
           <tbody>
@@ -28,7 +28,7 @@ export function Report({ entries, onDelete }: Props) {
                 <td>{entry.date}</td>
                 <td>{entry.workerName}</td>
                 <td>{entry.boxes}</td>
-                <td>R${entry.total.toFixed(2)}</td>
+                <td>{entry.total.toFixed(2)}</td>
                 <td>
                   <button
                     onClick={() => {
@@ -52,15 +52,21 @@ export function Report({ entries, onDelete }: Props) {
 const tableStyle: React.CSSProperties = {
   width: "100%",
   borderCollapse: "collapse",
-  marginTop: "1rem",
-  color: "white"
+  color: "white",
+  minWidth: "500px",
 };
 
 const deleteButtonStyle: React.CSSProperties = {
   backgroundColor: "#dc3545",
   color: "white",
   border: "none",
-  padding: "0.4rem 0.6rem",
+  padding: "0.3rem 0.6rem",
   borderRadius: "4px",
-  cursor: "pointer"
+  cursor: "pointer",
+};
+
+const thtdStyle: React.CSSProperties = {
+  border: "1px solid #ccc",
+  padding: "0.5rem",
+  textAlign: "left",
 };
