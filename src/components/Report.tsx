@@ -15,21 +15,21 @@ export function Report({ entries, onDelete }: Props) {
         <table style={tableStyle}>
           <thead>
             <tr>
-              <th>Data</th>
-              <th>Funcionário</th>
-              <th>Caixas</th>
-              <th>Total (R$)</th>
-              <th>Ação</th>
+              <th style={thtdStyle}>Data</th>
+              <th style={thtdStyle}>Funcionário</th>
+              <th style={thtdStyle}>Caixas</th>
+              <th style={thtdStyle}>Total (R$)</th>
+              <th style={thtdStyle}>Ação</th>
             </tr>
           </thead>
           <tbody>
             {entries.map((entry, i) => (
               <tr key={i}>
-                <td>{entry.date}</td>
-                <td>{entry.workerName}</td>
-                <td>{entry.boxes}</td>
-                <td>{entry.total.toFixed(2)}</td>
-                <td>
+                <td style={thtdStyle}>{entry.date}</td>
+                <td style={thtdStyle}>{entry.workerName}</td>
+                <td style={thtdStyle}>{entry.boxes}</td>
+                <td style={thtdStyle}>{entry.total.toFixed(2)}</td>
+                <td style={thtdStyle}>
                   <button
                     onClick={() => {
                       const confirm = window.confirm("Tem certeza que deseja deletar?");
